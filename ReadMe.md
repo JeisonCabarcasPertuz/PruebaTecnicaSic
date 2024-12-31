@@ -35,6 +35,31 @@ project/
 
 El backend está configurado para ejecutarse en el puerto `8080` y conectarse a una base de datos PostgreSQL.
 
+## Para la Base de datos se debe ejecutar los siguientes scripts
+
+CREATE TABLE registro (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    model_pc VARCHAR(255),
+    email VARCHAR(255),
+    record_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE modelopc (
+    id SERIAL PRIMARY KEY,              
+    modelo_pc VARCHAR(255) NOT NULL      
+);
+
+-- Insertar 5 modelos de PC inventados en la tabla
+INSERT INTO modelopc (modelo_pc) VALUES
+('Acer Predator Helios 300'),
+('Dell XPS 15'),
+('HP Omen 16'),
+('Lenovo Legion 5 Pro'),
+('MSI GE76 Raider');
+
+
 ### Archivo `app/Dockerfile`
 ```dockerfile
 # Usar la imagen oficial de OpenJDK para Java 21
