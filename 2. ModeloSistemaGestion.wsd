@@ -1,0 +1,56 @@
+@startuml
+class SistemaGestion {
+    - listaPersonas: List<Persona>
+    - listaEmpleados: List<Empleado>
+    - listaTramites: List<Tramite>
+    --
+    + registrarPersona(persona: Persona): void
+    + registrarEmpleado(empleado: Empleado): void
+    + registrarTramite(tramite: Tramite): void
+    + consultarPersona(id: String): Persona
+    + consultarTramite(numeroRadicacion: String): Tramite
+    + consultarEmpleado(id: String): Empleado
+}
+
+class Persona {
+    - tipoIdentificacion: String
+    - numeroIdentificacion: String
+    - nombres: String
+    - apellidos: String
+    - telefono: String
+    - direccion: String
+    - email: String
+    --
+    + registrar(): void
+    + editar(): void
+    + consultar(): Persona
+}
+
+class Empleado extends Persona {
+    - dependencia: String
+    - fechaIngreso: Date
+    --
+    + asignarDependencia(dependencia: String): void
+    + obtenerDependencia(): String
+}
+
+class Tramite {
+    - numeroRadicacion: String
+    - anioRadicacion: int
+    - nombre: String
+    - descripcion: String
+    - personaRadicante: Persona
+    - funcionarioReceptor: Empleado
+    --
+    + registrar(): void
+    + consultar(): Tramite
+    + editar(): void
+}
+
+SistemaGestion "1" *-- "0..*" Persona : "Gestión de Personas"
+SistemaGestion "1" *-- "0..*" Empleado : "Gestión de Empleados"
+SistemaGestion "1" *-- "0..*" Tramite : "Gestión de Trámites"
+Tramite "1" o-- "1" Persona : "radicante"
+Tramite "1" o-- "1" Empleado : "receptor"
+
+@enduml

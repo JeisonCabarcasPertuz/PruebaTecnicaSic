@@ -1,0 +1,30 @@
+Requerimientos No Funcionales
+
+1. Rendimiento:
+Las operaciones deben mantener un buen performance, es decir, estas no pueden tener un tiempo de respuesta mayor de 2s
+
+2. Escalabilidad:
+El sistema debe ser capaz de manejar un incremento en el número de usuarios y datos sin que esto suponga una degradación significativa en el rendimiento.
+
+3. Seguridad:
+Autenticación y autorización mediante usuario y contraseña con roles definidos.
+Cifrado de datos sensibles, como contraseñas y correos electrónicos.
+Validación estricta en los formularios para prevenir ataques de inyección o manipulación de datos.
+
+4. Usabilidad:
+La interfaz debe ser intuitiva y permitir el uso por personas con conocimientos básicos de informática.
+
+5. Auditoría:
+Registro de todas las acciones realizadas en el sistema, con detalles como el usuario, fecha y hora.
+
+6. Mantenimiento:
+El código debe estar documentado y modularizado para facilitar correcciones y futuras actualizaciones.
+
+7. Respaldo y Recuperación:
+Realización automática de copias de seguridad diarias, semanales o mensuales, según costes de recuperación y su impacto en las operaciones, para garantizar la información en caso de fallos.
+
+8. Compatibilidad:
+El sistema debe ser compatible con los estándares modernos y soportar integraciones con diferentes tecnologías.
+
+9. Trazabilidad:
+Se debe poder rastrear cada acción dentro del sistema, desde el registro de trámites hasta la edición de personas y empleados.
