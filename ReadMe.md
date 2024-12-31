@@ -2,8 +2,9 @@
 
 Este proyecto contiene dos aplicaciones:
 - **Backend (app)**: Hecho con Spring Boot 3.3.7 y Java 21.
+-- https://github.com/JeisonCabarcasPertuz/app.git
 - **Frontend (sicapp)**: Hecho con React, TypeScript y Vite.
-
+-- https://github.com/JeisonCabarcasPertuz/sicapp.git
 Ambas aplicaciones se configuran y ejecutan juntas utilizando Docker.
 
 ## Requisitos previos
